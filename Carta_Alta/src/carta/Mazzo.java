@@ -43,5 +43,6 @@ public class Mazzo {
 	public void ordinaMazzo() {
 		
 		listaCarte.sort(Carta::compareTo);
+		
 	}
 }

@@ -57,4 +57,5 @@ public enum SpecificheCarteItaliane implements IValoreCarta {
 
 	}
 	
+	
 }

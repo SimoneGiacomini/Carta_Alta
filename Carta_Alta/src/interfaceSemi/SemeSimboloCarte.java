@@ -6,3 +6,4 @@ public interface SemeSimboloCarte extends SemeCarte {
 
 	char getSimbolo();
 }
+

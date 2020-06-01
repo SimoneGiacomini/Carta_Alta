@@ -65,3 +65,4 @@ public enum SpecificheCarteTedesche implements IValoreCarta {
 	
 
 }
+

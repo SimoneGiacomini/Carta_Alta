@@ -56,3 +56,4 @@ public enum SpecificheCarteFrancesi implements IValoreCarta {
 	}
 
 }
+

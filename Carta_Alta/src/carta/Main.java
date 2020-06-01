@@ -9,8 +9,11 @@ public class Main {
 		Mazzo mazzoIta= new Mazzo(TipoMazzo.FRANCESE) ;
 		//Character[] semi= new Character[]{'\u2660',	'\u2663',	'\u2665',	'\u2666'};
 		while (true) {
-		InputDati.isInvioPremuto(mazzoIta.estrai().toString());
-		System.out.println("\u1F0A0");
+
+		
+
+		InputDati.isInvioPremuto(mazzoIta.estrai());
+
 		}
 	}
 	

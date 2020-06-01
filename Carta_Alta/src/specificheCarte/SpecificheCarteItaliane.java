@@ -1,5 +1,6 @@
-package carta;
+package specificheCarte;
 
+import carta.IValoreCarta;
 import interfaceSemi.SemeCarte;
 
 public enum SpecificheCarteItaliane implements IValoreCarta {
@@ -31,7 +32,7 @@ public enum SpecificheCarteItaliane implements IValoreCarta {
 	public int getValore() {
 		return valore;
 	}
-	enum SEMI implements SemeCarte{
+	public enum SEMI implements SemeCarte{
 		COPPE("COPPE"),
 		DENARI("DENARI"), 
 		SPADE("SPADE"), 

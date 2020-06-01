@@ -1,5 +1,6 @@
-package carta;
+package specificheCarte;
 
+import carta.IValoreCarta;
 import interfaceSemi.SemeSimboloCarte;
 
 public enum SpecificheCarteFrancesi implements IValoreCarta {
@@ -25,7 +26,7 @@ public enum SpecificheCarteFrancesi implements IValoreCarta {
 		return valore;
 	}
 
-	enum SEMI implements SemeSimboloCarte {
+	public enum SEMI implements SemeSimboloCarte {
 		CUORI("CUORI", '\u2665'), QUADRI("QUADRI", '\u2666'), PICCHE("PICCHE", '\u2660'), FIORI("FIORI", '\u2663');
 
 		private String seme;

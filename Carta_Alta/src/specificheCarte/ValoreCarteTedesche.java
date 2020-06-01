@@ -1,4 +1,6 @@
-package carta;
+package specificheCarte;
+
+import carta.IValoreCarta;
 
 public enum ValoreCarteTedesche implements IValoreCarta {
 	ASSO(14, "ASSO"),

@@ -8,7 +8,7 @@ public enum SpecificheCarteFrancesi implements IValoreCarta {
 					"OTTO"), NOVE(9, "NOVE"), DIECI(10, "DIECI"), JACK(11, "JACK"), DONNA(12, "DONNA"), RE(13, "RE");
 
 	private int valore;
-	private String nome;
+		private String nome;
 
 	SpecificheCarteFrancesi(int valore, String nome) {
 		this.valore = valore;

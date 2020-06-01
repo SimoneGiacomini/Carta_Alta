@@ -5,8 +5,8 @@ import interfaceSemi.SemeCarte;
 public enum TipoMazzo {
 	ITALIANO("ITALIANO", SpecificheCarteItaliane.SEMI.values(), SpecificheCarteItaliane.values()),
 	
-	FRANCESE("FRANCESE", SpecificheCarteFrancesi.SEMI.values(), SpecificheCarteFrancesi.values());
-	
+	FRANCESE("FRANCESE", SpecificheCarteFrancesi.SEMI.values(), SpecificheCarteFrancesi.values()),
+	TEDESCO("TEDESCO", SpecificheCarteTedesche.SEMI.values(),SpecificheCarteTedesche.values());
 	
 	private String name;
 	private SemeCarte[] semi;

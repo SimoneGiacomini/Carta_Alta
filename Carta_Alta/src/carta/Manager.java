@@ -17,6 +17,7 @@ public class Manager {
 	case 1:
 	case 'F':
 		System.out.println("");
+	
 		
 		break;
 	case 2:

@@ -29,14 +29,7 @@ public enum TipoMazzo {
 	public IValoreCarta[] getValori() {
 		return valori;
 	}
-//	private ArrayList<TipoMazzo> costruisciMazzo(){
-//		ArrayList<TipoMazzo>mazzoCostruito= new ArrayList<>();
-//		mazzoCostruito.add(FRANCESE);
-//		mazzoCostruito.add(ITALIANO);
-//		mazzoCostruito.add(TEDESCO);
-//		
-//		return mazzoCostruito ;
-			}
+	}
 	
 
 

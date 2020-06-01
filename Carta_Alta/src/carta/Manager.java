@@ -9,26 +9,46 @@ import util.mylib.OutputArray;
 
 public class Manager {
 	
-	public static void sceltaMazzo(){
+	private static final String REGIATRAZIONE_GIOCATORE = "registrati per ottenere le FISHE del credito iniziale,+"
+			+ "il tuo nome prego:";
+	private static final int VALORE_FICHE_INZIALE = 100;
+	public static TipoMazzo sceltaMazzo(){
 	MyMenu sceltaMazzo = new CharMenu("scelta del tipo si mazzo",TipoMazzo.values());
-	int  scelta = TipoMazzo.values().length;
+	int  scelta=sceltaMazzo.scegli() ;
 	
-	switch (scelta=sceltaMazzo.scegli()) {
+	switch (scelta) {
 	case 1:
-	case 'F':
-		System.out.println("");
-	
+	case 'A':
+		System.out.println("Italiano");
+        return TipoMazzo.ITALIANO;
 		
-		break;
 	case 2:
-	case 'I':
-		
-		break;
+	case 'B':
+		System.out.println("Francese");
+		return TipoMazzo.FRANCESE;
 	case 3:
-	case 'T':
-		;
-		break;
+	case 'C':
+		System.out.println("Tedesco");
+	     return TipoMazzo.TEDESCO;
 	}
-	
+	return null;
     
+	}
+	private static void scommessa(Partita scommetti)
+	 {
+		inserisciGiocatore();
+		
+		do {
+			Manager.sceltaMazzo();
+//			Mazzo mazzo= new Mazzo(Manager.sceltaMazzo()) ;
+//			InputDati.isInvioPremuto(mazzo.estrai());
+			InputDati.isInvioPremuto(new Mazzo(Manager.sceltaMazzo()).estrai());
+		 
+		} while(scommetti.haiPerso());
+	 }
+	private static void inserisciGiocatore() {
+		String giocatore = InputDati.leggiStringaNonVuota(REGIATRAZIONE_GIOCATORE);
+		int sommainzialeFish =VALORE_FICHE_INZIALE;
+	}
+
 }

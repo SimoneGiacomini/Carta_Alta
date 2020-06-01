@@ -23,6 +23,8 @@ public class Carta implements Comparable<Carta> {
 		return this.getValore() - other.getValore();
 	}
 	
+	
+	
 	//Carta carta1=new Carta(CUORI,1);
 	//Carta carta2= new Carta(CUORI,2);
 	//carta2.compareTo();

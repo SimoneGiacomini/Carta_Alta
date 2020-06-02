@@ -1,6 +1,6 @@
 package valoriCarte;
 
-public enum SpecificheCarteTedesche implements IValoreCarta {
+public enum ValoreCarteTedesche implements IValoreCarta {
 	ASSO(14, "DAUS_ASSO"),
     SEI(7, "SEI"),
 	SETTE(8, "SETTE"),
@@ -13,7 +13,7 @@ public enum SpecificheCarteTedesche implements IValoreCarta {
 	private int valore;
 	private String nome;
 	
-	SpecificheCarteTedesche(int valore, String nome) {
+	ValoreCarteTedesche(int valore, String nome) {
 		this.valore = valore;
 		this.nome = nome;
 	}

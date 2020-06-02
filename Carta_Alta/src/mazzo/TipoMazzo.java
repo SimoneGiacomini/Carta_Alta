@@ -5,7 +5,7 @@ import semi.SemiFrancesi;
 import semi.SemiItaliani;
 import semi.SemiTedeschi;
 import valoriCarte.IValoreCarta;
-import valoriCarte.SpecificheCarteTedesche;
+import valoriCarte.ValoreCarteTedesche;
 import valoriCarte.ValoreCarteBriscola;
 import valoriCarte.ValoreCarteFrancesi;
 import valoriCarte.ValoreCarteItaliane;
@@ -16,7 +16,7 @@ public enum TipoMazzo {
 	FRANCESE("FRANCESE", SemiFrancesi.values(), ValoreCarteFrancesi.values()),
 	
 	
-	TEDESCO("TEDESCO", SemiTedeschi.values(),SpecificheCarteTedesche.values()),
+	TEDESCO("TEDESCO", SemiTedeschi.values(),ValoreCarteTedesche.values()),
 	
 	BRISCOLA("BRISCOLA",SemiItaliani.values(),ValoreCarteBriscola.values());
 	

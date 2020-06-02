@@ -10,8 +10,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import casinoMain.Carta;
 import casinoMain.Partita;
+import mazzo.Carta;
 import mazzo.TipoMazzo;
 import valoriCarte.ValoreCarteFrancesi;
 

@@ -1,4 +1,4 @@
-package casinoMain;
+package mazzo;
 
 import valoriCarte.IValoreCarta;
 
@@ -17,7 +17,7 @@ public class Carta implements Comparable<Carta> {
 
 	@Override
 	public String toString() {
-		return "[" + this.seme + "]: " + this.valoreCarta.getNome() + " (" + getValore() + ")";
+		return "[" + this.seme + "]: " + this.valoreCarta.getNome() ;
 	}
 
 /** @return Ordina dalle carte con valore pi� basso a quelle pi� alto 2-3-4-5-6-7-FANTE,CAVALLO,RE-ASSO*/

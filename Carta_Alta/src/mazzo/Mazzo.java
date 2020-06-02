@@ -4,7 +4,6 @@ package mazzo;
 
 import java.util.ArrayList;
 
-import casinoMain.Carta;
 import interfaceSemi.SemeCarte;
 import util.mylib.EstrazioniCasuali;
 import valoriCarte.IValoreCarta;
@@ -18,11 +17,11 @@ public class Mazzo {
 		listaCarte = costruisciMazzo(tipo.getSemi(), tipo.getValori());
 	}
 	
-	public ArrayList<Carta> getListaCarte() {
+	private ArrayList<Carta> getListaCarte() {
 		return listaCarte;
 	}
 
-	public void setListaCarte(ArrayList<Carta> listaCarte) {
+	private void setListaCarte(ArrayList<Carta> listaCarte) {
 		this.listaCarte = listaCarte;
 	}
 

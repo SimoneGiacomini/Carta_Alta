@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.*;
 
-import casinoMain.Carta;
+import mazzo.Carta;
 import valoriCarte.*;
 
 

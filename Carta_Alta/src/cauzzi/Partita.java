@@ -2,7 +2,7 @@ package cauzzi;
 
 import java.util.ArrayList;
 
-import casinoMain.Carta;
+import mazzo.Carta;
 import mazzo.Mazzo;
 import mazzo.TipoMazzo;
 

@@ -1,6 +1,6 @@
 package casinoMain;
 
-import mazzo.Banco;
+import mazzo.Carta;
 import mazzo.Mazzo;
 import mazzo.TipoMazzo;
 

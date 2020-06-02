@@ -1,9 +1,9 @@
 package casinoMain;
 
-import mazzo.Banco;
+import mazzo.Carta;
 import mazzo.TipoMazzo;
 import util.mylib.BelleStringhe;
-import util.mylib.CharMenu;
+
 import util.mylib.InputDati;
 import util.mylib.MyMenu;
 

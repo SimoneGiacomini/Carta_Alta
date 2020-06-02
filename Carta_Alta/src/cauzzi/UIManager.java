@@ -1,6 +1,6 @@
 package cauzzi;
 
-import casinoMain.Carta;
+import mazzo.Carta;
 import mazzo.TipoMazzo;
 import util.mylib.*;
 

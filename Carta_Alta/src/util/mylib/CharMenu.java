@@ -50,9 +50,9 @@ public class CharMenu<T> extends MyMenu<T> {
 			System.out.println(IMPOSSIBILE_CREARE_CHARMENU);
 			super.stampaMenu();
 		} else {
-			System.out.println(BelleStringhe.incorniciaCentrato(getTitolo(), LUNGHEZZA_RICHIESTA));
-			for (char a = 'A', i = 0; i < getVoci().length; a++, i++) {
-				System.out.println((a) + ")\t" + getVoci()[i]);
+			System.out.println(getTitolo());
+			for ( char i = 0; i < getVoci().length; i++) {
+				System.out.println((char)('A'+i) + ")\t" + getVoci()[i]);
 			}
 		}
 	}

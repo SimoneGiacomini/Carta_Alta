@@ -18,7 +18,7 @@ public class MyMenu<T> {
 	private T[] voci;
 
 	public MyMenu(String titolo, T[] voci) {
-		this.titolo = titolo;
+		this.titolo = BelleStringhe.incorniciaCentrato(titolo, LUNGHEZZA_RICHIESTA);
 		this.voci = voci;
 	}
 
@@ -29,7 +29,7 @@ public class MyMenu<T> {
 	}
 
 	public void stampaMenu() {
-		System.out.println(BelleStringhe.incorniciaCentrato(getTitolo(), LUNGHEZZA_RICHIESTA));
+		System.out.println(getTitolo());
 		for (int i = 0; i < voci.length; i++) {
 			System.out.println((i + 1) + ")\t" + voci[i]);
 		}

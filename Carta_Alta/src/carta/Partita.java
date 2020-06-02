@@ -4,16 +4,18 @@ package carta;
 
 public class Partita{
 	
-	//private static char moneta ='£';
+	
 	private int credito =0;
-	//private String credito = "moneta +denaro";
+	
+	
+
 	private String giocatore ;
 	private Mazzo mazzoScelto;
 	
 	public Partita(String _scommettitore,int _denaro,Mazzo mazzoScelto){
 		this.giocatore = _scommettitore;
 		this.credito =_denaro;
-		this.mazzoScelto =new Mazzo(Manager.sceltaMazzo());
+		this.mazzoScelto =getMazzoScelto();
 		
 	}
 	
@@ -24,7 +26,12 @@ public class Partita{
 	public Mazzo getMazzoScelto() {
 		return mazzoScelto;
 	}
+	public Mazzo setMazzoScelto() {
+		return this.mazzoScelto =Manager.sceltaMazzo();
+	}
 
+
+	
 
 	public String getNomeGiocatore() {
 		return giocatore;

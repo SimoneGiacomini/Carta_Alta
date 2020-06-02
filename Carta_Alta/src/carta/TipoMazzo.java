@@ -3,10 +3,13 @@ package carta;
 import interfaceSemi.SemeCarte;
 
 public enum TipoMazzo {
-	ITALIANO("ITALIANO", SpecificheCarteItaliane.SEMI.values(), SpecificheCarteItaliane.values()),
+	ITALIANO("ITALIANO", SemiItaliani.values(), ValoreCarteItaliane.values()),
 	
-	FRANCESE("FRANCESE", SpecificheCarteFrancesi.SEMI.values(), SpecificheCarteFrancesi.values()),
-	TEDESCO("TEDESCO", SpecificheCarteTedesche.SEMI.values(),SpecificheCarteTedesche.values());
+	FRANCESE("FRANCESE", SemiFrancesi.values(), ValoreCarteFrancesi.values()),
+	
+	TEDESCO("TEDESCO", SpecificheCarteTedesche.SEMI.values(),SpecificheCarteTedesche.values()),
+	
+	BRISCOLA("BRISCOLA",SemiItaliani.values(),ValoreCarteBriscola.values());
 	
 	private String name;
 	private SemeCarte[] semi;

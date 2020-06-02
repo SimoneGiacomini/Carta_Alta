@@ -15,11 +15,11 @@ public class Carta implements Comparable<Carta> {
 
 	@Override
 	public String toString() {
-		StringBuilder cartaEstratta = new StringBuilder();
-		cartaEstratta.append(String.format("%d ", getValore() ));
-		cartaEstratta.append(String.format("di %s ",getSeme() ));
-		//return "[" + this.seme + "]: " + this.valoreCarta.getNome() + " (" + getValore() + ")";
-		return cartaEstratta.toString();
+		//StringBuilder cartaEstratta = new StringBuilder();
+//		cartaEstratta.append(String.format("%d ", getValore() ));
+//		cartaEstratta.append(String.format("di %s ",getSeme() ));
+		return "[" + this.seme + "]: " + this.valoreCarta.getNome();
+		//return cartaEstratta.toString();
 	}
 public IValoreCarta getValoreCarta() {
 		return valoreCarta;

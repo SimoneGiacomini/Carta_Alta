@@ -1,5 +1,6 @@
 package carta;
 
+
 import util.mylib.BelleStringhe;
 import util.mylib.CharMenu;
 import util.mylib.InputDati;
@@ -38,10 +39,14 @@ public class Manager {
 	}
 
 	public static void gioca() {
-	printWelcome();
+do {
+		printWelcome();
 	Partita unaScommessa = introPartita();
 do {
-	InputDati.yesOrNo("estrai una carta");
+	//InputDati.yesOrNo("estrai una carta");
+	if(InputDati.yesOrNo("estrai una carta")==true) {
+		
+	
 	Carta cartaGiocatore = unaScommessa.getMazzoScelto().estrai();
 	System.out.println( BelleStringhe.stampaStringaCorniceCentrato(String.format("hai estratto la carta %s %n"
 			+ "il tuo attuale credito ammonta a: %d %c %n"
@@ -52,11 +57,23 @@ do {
      System.out.println(BelleStringhe.stampaStringaCorniceCentrato(String.format("Carta del BANCO %n %s",cartaBanco.toString()),BelleStringhe.GRADO));
      Banco esito = unaScommessa.scommessa(cartaGiocatore, cartaBanco,puntata);
      esitoGiocata(esito, unaScommessa);
-     
+	}
+	else {
+	System.out.println("smetti di puntare dunque");
+	if(newPlay()==false) {
+		System.out.println("prima di uscire puoi andare a cambiare le tue fiche");
+		System.out.println( MESS_GOODBYE + unaScommessa.getNomeGiocatore().toString()+" esce con  "+unaScommessa.getCredito()+moneta);
+		System.exit(0);
+	}
+	}
+	
+
+	
 	} while (!unaScommessa.haiPerso());
 			System.out.println(FICHE_ESAURITE);
-	
-		
+
+}while (newPlay());
+    
 }
 
 	private static void esitoGiocata(Banco esito,Partita unaScommessa) {
@@ -109,4 +126,9 @@ do {
 		System.out.println(MESS_GOODBYE);
 		System.out.println(frame);
 	}
+	public static boolean newPlay() {
+		System.out.println();
+		return InputDati.yesOrNo("vuoi giocare ancora ? ");
+	}
+
 }

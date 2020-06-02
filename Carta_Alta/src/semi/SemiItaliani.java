@@ -1,8 +1,8 @@
-package carta;
+package semi;
 
 import interfaceSemi.SemeCarte;
 
-enum SemiItaliani implements SemeCarte{
+public enum SemiItaliani implements SemeCarte{
 	COPPE("COPPE"),
 	DENARI("DENARI"), 
 	SPADE("SPADE"), 

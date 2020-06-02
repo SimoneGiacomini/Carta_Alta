@@ -1,4 +1,6 @@
-package carta;
+package casinoMain;
+
+import valoriCarte.IValoreCarta;
 
 public class Carta implements Comparable<Carta> {
 	IValoreCarta valoreCarta;

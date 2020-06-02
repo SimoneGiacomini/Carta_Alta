@@ -1,4 +1,4 @@
-package carta;
+package valoriCarte;
 
 
 public interface IValoreCarta {

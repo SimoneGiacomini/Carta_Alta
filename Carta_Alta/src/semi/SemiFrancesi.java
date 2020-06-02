@@ -1,8 +1,8 @@
-package carta;
+package semi;
 
 import interfaceSemi.SemeSimboloCarte;
 
-enum SemiFrancesi implements SemeSimboloCarte {
+public enum SemiFrancesi implements SemeSimboloCarte {
 	CUORI("CUORI", '\u2665'), QUADRI("QUADRI", '\u2666'), PICCHE("PICCHE", '\u2660'), FIORI("FIORI", '\u2663');
 
 	private String seme;

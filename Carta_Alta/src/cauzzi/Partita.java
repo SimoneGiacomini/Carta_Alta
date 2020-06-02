@@ -2,9 +2,9 @@ package cauzzi;
 
 import java.util.ArrayList;
 
-import carta.Carta;
-import carta.Mazzo;
-import carta.TipoMazzo;
+import casinoMain.Carta;
+import mazzo.Mazzo;
+import mazzo.TipoMazzo;
 
 
 

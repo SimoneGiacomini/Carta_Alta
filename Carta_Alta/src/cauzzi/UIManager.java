@@ -1,7 +1,7 @@
 package cauzzi;
 
-import carta.Carta;
-import carta.TipoMazzo;
+import casinoMain.Carta;
+import mazzo.TipoMazzo;
 import util.mylib.*;
 
 public class UIManager {

@@ -1,11 +1,13 @@
-package carta;
+package mazzo;
 
 
 
 import java.util.ArrayList;
 
+import casinoMain.Carta;
 import interfaceSemi.SemeCarte;
 import util.mylib.EstrazioniCasuali;
+import valoriCarte.IValoreCarta;
 
 
 public class Mazzo {

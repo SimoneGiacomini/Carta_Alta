@@ -1,4 +1,8 @@
-package carta;
+package casinoMain;
+
+import mazzo.Banco;
+import mazzo.Mazzo;
+import mazzo.TipoMazzo;
 
 public class Partita {
 

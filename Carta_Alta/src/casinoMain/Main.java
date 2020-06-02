@@ -1,4 +1,4 @@
-package carta;
+package casinoMain;
 
 
 public class Main {

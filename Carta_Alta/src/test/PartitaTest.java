@@ -10,10 +10,10 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import carta.Carta;
-import carta.Partita;
-import carta.TipoMazzo;
-import carta.ValoreCarteFrancesi;
+import casinoMain.Carta;
+import casinoMain.Partita;
+import mazzo.TipoMazzo;
+import valoriCarte.ValoreCarteFrancesi;
 
 public class PartitaTest {
 

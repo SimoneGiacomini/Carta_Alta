@@ -9,7 +9,7 @@ public class Manager {
 	private static final String SCELTA_SPECIFICHE_MAZZO = "scegli il tipo di mazzo:";
 	private static final String FICHE_ESAURITE = "Spiacente hai finito le tue Fiche,devi smettere di giocare";
 	private static char moneta = '£';
-	private static final String REGISTRAZIONE_GIOCATORE = " Benvenuto ,registrati per ottenere le FICHE del credito iniziale"
+	private static final String REGISTRAZIONE_GIOCATORE = "Benvenuto, registrati per ottenere le FICHE del credito iniziale\n"
 			+ "il tuo nome prego:";
 	private static final int VALORE_FICHE_INZIALE = 100;
 	private static final String WARNING_ACCOUNT_BALANCE = "sei davvero sicuro di voler cambiare altre fiche ?";
@@ -36,9 +36,12 @@ public class Manager {
 
 	public static void gioca() {
 	Partita unaScommessa = introPartita();
-    Carta cartaGiocatore =unaScommessa.getMazzoScelto().estrai();
-    System.out.println("carta"+cartaGiocatore);
-//				
+	InputDati.yesOrNo("estrai una carta");
+	Carta cartaGiocatore = unaScommessa.getMazzoScelto().estrai();
+	System.out.println( BelleStringhe.stampaStringaCorniceCentrato(String.format("hai estratto la carta %s %n"
+			+ "il tuo attuale credito ammonta a: %d %c %n"
+			+ "quanto punti? :",cartaGiocatore.toString(),unaScommessa.getCredito(),moneta),BelleStringhe.GRADO));
+     int puntata =InputDati.leggiIntero("quanto punti", 1, unaScommessa.getCredito());		
 	
 //				int puntata =
 //						unaScommessa.puntata(InputDati.leggiIntero(

@@ -36,7 +36,8 @@ public class Manager {
 
 	public static void gioca() {
 	Partita unaScommessa = introPartita();
- //  Carta cartaGiocatore = unaScommessa.estraiCarta();
+    Carta cartaGiocatore =unaScommessa.getMazzoScelto().estrai();
+    System.out.println("carta"+cartaGiocatore);
 //				
 	
 //				int puntata =

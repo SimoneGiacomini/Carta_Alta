@@ -15,7 +15,7 @@ public class Partita{
 	public Partita(String _scommettitore,int _denaro,Mazzo mazzoScelto){
 		this.giocatore = _scommettitore;
 		this.credito =_denaro;
-		this.mazzoScelto =getMazzoScelto();
+		this.mazzoScelto = mazzoScelto;
 		
 	}
 	

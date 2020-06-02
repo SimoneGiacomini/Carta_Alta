@@ -49,33 +49,18 @@ public class Partita{
 		return this.credito <= 0;
 	}
 	
-	public int puntata(int somma) {
-		boolean finito = false;
-		int incasso=0;
-	    do {
-		if(credito>=somma) 
-			try {
-				somma=incasso;
-			    finito =true;
-			}
-			 catch (Exception e) {
-				System.out.println("puoi puntare solo somme inferiori uguali al tuo credito");
-			}
-	        }while (!finito);
-		return incasso;
-		}
 	
 	
 	
 	public  Banco scommessa(Carta cartaGiocatore , Carta cartaBanco,int incasso ) {
 		int risultato =cartaGiocatore.compareTo(cartaBanco) ;
 		    if (risultato > 0) {
-			this.credito = credito + puntata(incasso);
+			this.credito = credito + incasso;
 			return Banco.perde;
 		} else if (risultato == 0) {
 			return Banco.pareggia;
 		}
-		this.credito = credito - puntata(incasso);
+		this.credito = credito - incasso;
 		return Banco.vince;
 	}
 

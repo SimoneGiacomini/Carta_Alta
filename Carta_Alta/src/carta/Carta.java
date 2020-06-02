@@ -15,8 +15,28 @@ public class Carta implements Comparable<Carta> {
 
 	@Override
 	public String toString() {
-		return "[" + this.seme + "]: " + this.valoreCarta.getNome() + " (" + getValore() + ")";
+		StringBuilder cartaEstratta = new StringBuilder();
+		cartaEstratta.append(String.format("%d ", getValore() ));
+		cartaEstratta.append(String.format("di %s ",getSeme() ));
+		//return "[" + this.seme + "]: " + this.valoreCarta.getNome() + " (" + getValore() + ")";
+		return cartaEstratta.toString();
 	}
+public IValoreCarta getValoreCarta() {
+		return valoreCarta;
+	}
+
+	public void setValoreCarta(IValoreCarta valoreCarta) {
+		this.valoreCarta = valoreCarta;
+	}
+
+	public String getSeme() {
+		return seme;
+	}
+
+	public void setSeme(String seme) {
+		this.seme = seme;
+	}
+
 /** @return Ordina dalle carte con valore pi� basso a quelle pi� alto 2-3-4-5-6-7-FANTE,CAVALLO,RE-ASSO*/
 	@Override
 	public int compareTo(Carta other) {

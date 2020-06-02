@@ -11,6 +11,8 @@ public class BelleStringhe {
 
 	public final static String ACAPO = System.lineSeparator();
 
+	public final static char STELLA = '*';
+
 	public final static char GRADO = '\u00b0';
 
 	public static String incorniciaCentrato(String s, int lunghezzaCornice) {

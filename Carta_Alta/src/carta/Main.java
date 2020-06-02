@@ -1,7 +1,5 @@
 package carta;
 
-import util.mylib.InputDati;
-import util.mylib.OutputArray;
 
 public class Main {
 	

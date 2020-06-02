@@ -44,7 +44,7 @@ public enum SpecificheCarteFrancesi implements IValoreCarta {
 		}
 
 		public String toString() {
-			return seme + simbolo;
+			return seme + simbolo ;
 		}
 
 		/**

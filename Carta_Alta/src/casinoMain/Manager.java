@@ -1,7 +1,5 @@
 package casinoMain;
 
-import carta.Banco;
-import carta.Partita;
 import mazzo.Carta;
 import mazzo.TipoMazzo;
 import util.mylib.BelleStringhe;
@@ -139,4 +137,10 @@ public class Manager {
 	public static void printGoodbye() {
 		System.out.println(BelleStringhe.incorniciaCentrato(MESS_GOODBYE, MESS_GOODBYE.length() + 3));
 	}
+	/**Chiede se si vuole continuare a giocare*/
+	public static boolean newPlay() {
+		System.out.println();
+		return InputDati.yesOrNo("Vuoi giocare ancora in questo tavolo ? ");
+	}
+
 }

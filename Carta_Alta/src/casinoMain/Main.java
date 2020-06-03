@@ -1,15 +1,11 @@
 package casinoMain;
 
-
 public class Main {
-	
+
 	public static void main(String[] args) {
-		
-     Manager.gioca();
+
+		Manager.gioca();
+
 	}
-	}
 
-
-
-
-
+}

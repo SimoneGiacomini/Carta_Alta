@@ -11,8 +11,8 @@ package util.mylib;
 
 public class MyMenu<T> {
 
-	final protected static String VOCE_USCITA = "0)\tExit";
-	final private static String RICHIESTA_INSERIMENTO = "Enter the number of the required option: ";
+	final protected static String VOCE_USCITA = "0)\tEsci";
+	final private static String RICHIESTA_INSERIMENTO = "Digita il numero dell'opzione desiderata >  ";
 	protected final static int LUNGHEZZA_RICHIESTA = RICHIESTA_INSERIMENTO.length();
 	private String titolo;
 	private T[] voci;

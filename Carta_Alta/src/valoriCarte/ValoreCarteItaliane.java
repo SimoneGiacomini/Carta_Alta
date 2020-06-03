@@ -1,5 +1,5 @@
 package valoriCarte;
-
+/**Indentifica i valori delle carte Italiane*/
 public enum ValoreCarteItaliane implements IValoreCarta {
 	ASSO(11, "ASSO"),
 	DUE(2, "DUE"),

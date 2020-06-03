@@ -20,24 +20,25 @@ public enum TipoMazzo {
 	
 	BRISCOLA("BRISCOLA",SemiItaliani.values(),ValoreCarteBriscola.values());
 	
-	private String name;
+	private String nome;
 	private SemeCarte[] semi;
 	private IValoreCarta[] valori;
-	
-	TipoMazzo(String name, SemeCarte[] semi, IValoreCarta [] valori){
-		this.name = name;
+	/**Costruttore 
+	 * @param name*/
+	TipoMazzo(String nome, SemeCarte[] semi, IValoreCarta [] valori){
+		this.nome = nome;
 		this.valori = valori;
 		this.semi = semi;
 	}
-	
-	public String getName() {
-		return name;
+	/**@return il nome che ha quel {@code TipoMazzo}*/
+	public String getNome() {
+		return nome;
 	}
-
+/**@return i vari semi di quel {@code TipoMazzo}*/
 	public SemeCarte[] getSemi() {
 		return semi; 
 	}
-	
+	/**@return i vari Valori di quel {@code TipoMazzo}*/
 	public IValoreCarta[] getValori() {
 		return valori;
 	}

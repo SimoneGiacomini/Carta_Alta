@@ -9,21 +9,13 @@ public enum SemiItaliani implements SemeCarte{
 	BASTONI("BASTONI");
 
 	private String seme;
-	
+	/**Costruttore*/
 	SemiItaliani(String seme) {
 		this.seme = seme;
 	}
 
-	/**
-	 * @return the seme
-	 */
 	public String getSeme() {
 		return seme;
-	}
-	@Override
-	public String toString() {
-		
-		return super.toString();
 	}
 
 }

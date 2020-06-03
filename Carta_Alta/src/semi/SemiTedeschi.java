@@ -3,7 +3,7 @@ package semi;
 import interfaceSemi.SemeSimboloCarte;
 
 /**
- * @author Simone
+ * @author Francesca
  *
  */
 public enum SemiTedeschi implements SemeSimboloCarte{
@@ -15,19 +15,18 @@ public enum SemiTedeschi implements SemeSimboloCarte{
 	private String seme;
 	private char simbolo;
 
-
+	/**Costruttore*/
 	SemiTedeschi(String seme, char simbolo) {
 		this.seme = seme;
 		this.simbolo = simbolo;
 	}
 
 
-	/**
-	 * @return the seme
-	 */
+	
 	public String getSeme() {
 		return seme;
 	}
+	/**@return {@linkplain String} tipo {@linkplain #seme}+{@link #simbolo}*/
 	@Override
 	public String toString() {
 		

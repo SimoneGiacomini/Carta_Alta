@@ -1,48 +1,67 @@
 package mazzo;
 
-
-
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 import interfaceSemi.SemeCarte;
 import util.mylib.EstrazioniCasuali;
 import valoriCarte.IValoreCarta;
 
-
 public class Mazzo {
-	
-	private ArrayList<Carta> listaCarte = new ArrayList<Carta>();
-	
+
+	private List<Carta> listaCarte = new ArrayList<Carta>();
+	private String tipoDiMazzo;
+
+	/**
+	 * Costruttore del mazzo
+	 * 
+	 * @param tipo
+	 *            e' uno dei tipi presenti in {@linkplain TipoMazzo}
+	 */
 	public Mazzo(TipoMazzo tipo) {
 		listaCarte = costruisciMazzo(tipo.getSemi(), tipo.getValori());
-	}
-	
-	private ArrayList<Carta> getListaCarte() {
-		return listaCarte;
+		tipoDiMazzo = tipo.getNome();
 	}
 
-	private void setListaCarte(ArrayList<Carta> listaCarte) {
-		this.listaCarte = listaCarte;
-	}
-
-	private ArrayList<Carta> costruisciMazzo(SemeCarte[] semi, IValoreCarta[] valori){
-		ArrayList<Carta> result = new ArrayList<Carta>();
-		for (SemeCarte seme: semi) {
-			for (IValoreCarta valore: valori) {
-				Carta carta = new Carta(seme.toString(), valore);
-				result.add(carta);
+	/**
+	 * Costruisce il mazzo con tutte le sue {@linkplain Carta}, utilizzando i
+	 * {@linkplain SemeCarte} e i valori di esse
+	 * 
+	 * @return una {@linkplain List} immodificabile
+	 * @param semi
+	 *            sono i semi da settare
+	 * @param valori
+	 *            sono i valori di ogni {@linkplain Carta}
+	 * @author Simone
+	 */
+	private List<Carta> costruisciMazzo(SemeCarte[] semi, IValoreCarta[] valori) {
+		List<Carta> result = new ArrayList<Carta>();
+		for (SemeCarte seme : semi) {
+			for (IValoreCarta valore : valori) {
+				result.add(new Carta(seme.toString(), valore));
 			}
 		}
-		return result;
-	} 
-	
+		return Collections.unmodifiableList(result);
+	}
+
+	/** Estrae una carta casualmente dal mazzo */
 	public Carta estrai() {
-		int estratto = EstrazioniCasuali.estraiIntero(0, listaCarte.size()-1);
+		int estratto = EstrazioniCasuali.estraiIntero(0, listaCarte.size() - 1);
 		return listaCarte.get(estratto);
 	}
-	
+
+	/** Riordina il mazzo dalle carte con valore piu' basso a quelle piu' alte */
 	public void ordinaMazzo() {
-		
+
 		listaCarte.sort(Carta::compareTo);
 	}
+
+	/**
+	 * @return the tipoDiMazzo
+	 */
+	public String getTipoDiMazzo() {
+		return tipoDiMazzo;
+	}
+
 }

@@ -7,26 +7,20 @@ public enum SemiFrancesi implements SemeSimboloCarte {
 
 	private String seme;
 	private char simbolo;
-
+/**Costruttore*/
 	SemiFrancesi(String seme, char simbolo) {
 		this.seme = seme;
 		this.simbolo = simbolo;
 	}
 
-	/**
-	 * @return the seme
-	 */
 	public String getSeme() {
 		return seme;
 	}
-
+/**@return {@linkplain String} tipo {@linkplain #seme}+{@link #simbolo}*/
 	public String toString() {
 		return seme + simbolo ;
 	}
 
-	/**
-	 * @return the simbolo
-	 */
 	public char getSimbolo() {
 		return simbolo;
 	}

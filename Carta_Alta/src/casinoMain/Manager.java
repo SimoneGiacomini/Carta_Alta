@@ -1,5 +1,7 @@
 package casinoMain;
 
+import carta.Banco;
+import carta.Partita;
 import mazzo.Carta;
 import mazzo.TipoMazzo;
 import util.mylib.BelleStringhe;
@@ -54,6 +56,7 @@ public class Manager {
 		printWelcome();
 		Partita unaScommessa = introPartita();
 		do {
+			if (InputDati.yesOrNo("Estrai una carta")) {
 			Carta cartaGiocatore = unaScommessa.estraiCarta();
 			System.out
 					.println(BelleStringhe.stampaStringaCorniceCentrato(
@@ -67,12 +70,18 @@ public class Manager {
 					String.format("Carta del BANCO %n %s", cartaBanco.toString()), BelleStringhe.GRADO));
 			Banco esito = unaScommessa.scommetti(puntata, cartaGiocatore, cartaBanco);
 			esitoGiocata(esito, unaScommessa);
-
+			}	else {
+				System.out.println("Smetti di puntare dunque");
+				if (newPlay() == false) {
+					System.out.println("Prima di uscire puoi andare a cambiare le tue fiche");
+					System.out.println( MESS_GOODBYE + unaScommessa.getNomeGiocatore()+" esce con  "+unaScommessa.getCredito()+MONETA);
+					return ;
+				}
+			}
 		} while (!unaScommessa.isFinita());
 		System.out.println(FICHE_ESAURITE);
 
 	}
-
 	/** Metodo che riassume i vari tipi di esiti che accadono in una giocata */
 	private static void esitoGiocata(Banco esito, Partita unaScommessa) {
 
